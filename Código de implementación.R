@@ -429,7 +429,7 @@ checkresiduals(modarima)#no hay error en los residuales
 eacf(modarima$residuals)#ruido blanco
 
 #pronóstico
-fut_arima = forecast(modarima, xreg = prediccion[1:h3,])
+fut_arima = forecast(modarima, xreg = prediccion[1:h3,])#el vector predicción es el resultado del modelo predicitivo para el precio internacional del cacao que se encuentra en la linea 489
 autoplot(fut_arima, ylab = "Precio Nacional del Cacao")
 
 
@@ -446,7 +446,7 @@ testRN<- datos3[(length(datos3$precioNacional1) - h4 + 1):length(datos3$precioNa
                   lambda="auto"))
 
 #se halla el forecast
-fct<-forecast(fit_nnr, xreg =prediccion[(length(prediccion)-h4+1):length(prediccion)], PI=TRUE)
+fct<-forecast(fit_nnr, xreg =prediccion[(length(prediccion)-h4+1):length(prediccion)], PI=TRUE)#el vector predicción es el resultado del modelo predicitivo para el precio internacional del cacao que se encuentra en la linea 489
 fct
 
 Gráfico
